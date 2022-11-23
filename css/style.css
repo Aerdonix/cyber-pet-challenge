@@ -1,0 +1,354 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    cursor:url(../images/paw.png), auto;
+}
+
+@keyframes fade-in{
+    0% {
+    transform: scale(0.1) rotateY(90deg) }
+    
+    100% {}
+
+}
+@keyframes fade-out{
+    0% {}
+    100% {  
+        transform: scale(0);}
+
+}
+body {
+    
+    background: #1d1c0d;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/images.jfif');
+    
+
+}
+
+#welcomeScreen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #b3b0e1;
+    width: 82vw;
+    height: 80vh;
+    background-color: rgb(89, 185, 190);
+    background-image: url("../images/charSelectBK.jpg");
+    background-size: 70% ;
+    border-radius: 200px;
+}
+
+.h1 {
+    font-size: 38px;
+    color: #b3b0e1;
+}
+
+.h2 {
+    font-size: 30px;
+    color: #cfcee2;
+    margin-bottom: 20px;
+}
+
+.images {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    border: 5px solid #cfcee2;
+    box-shadow: rgba(43, 43, 45, 0.8) 0px 10px 10px 0px;
+    background-color: #cfcee2;
+    margin-bottom: 20px;
+}
+
+.images img {
+    /* position:relative; */
+    display: flex;
+    width: 25%;
+    height: 100%;
+    margin: 5px 0px;
+    border: 18px inset #cfcee2;
+}
+
+.images img:hover {
+    border: 3px inset white;
+    transition: 1s;
+    box-shadow: rgba(70, 140, 69, 0.8) 0px 0px 5px 5px;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes shake {
+    100% {
+        transform: rotate(720deg)scale(1.4);
+    }
+}
+
+/* help button */
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: text-bottom;
+    padding: 8px 24px;
+    border: 5px ridge #4d4803;
+    border-radius: 100px;
+    background: #abaabd;
+    box-shadow: rgba(64, 64, 66, 0.5) 0px 10px 30px 0px;
+    text-decoration: none;
+    color: #333;
+    margin: 10px;
+    width: 130px;
+}
+
+
+.button:hover {
+   
+    background: #cfcee2;
+    text-decoration: none;
+
+}
+
+/* .......................................................... */
+#gameContainer {
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    background-color: #f09570;
+    color: #252422;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 97vh;
+    border: 10px ridge #f17c4e;
+}
+
+#gameContainer .gameContainerTop {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    border-top: 10px ridge #f17c4e;
+    border-bottom: 10px ridge #f17c4e;
+    flex: 1 1 50%;
+}
+
+#gameContainer .petPhoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+    flex: 1 1 40%;
+    padding: 5px;
+    background-color: white;
+
+}
+
+#gameContainer .petPhoto img {
+    height: 40vh;
+    width: 100%;
+
+}
+
+
+
+
+#gameContainer .petStats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1 1 60%;
+    height: 100%;
+    background-color: wheat;
+    padding: 10px;
+    border: 5px solid black;
+    border-left: none;
+    font-size: 1.1em;
+}
+
+#gameContainer .petStats .statsBar {
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 15px;
+    background: #ccc;
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+#gameContainer .petStats .statsBar .stats {
+    background: #5bb450;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 15px;
+    color: white;
+}
+
+#gameContainer #controlArea {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    background-color: #f09570;
+    width: 100%;
+    align-items: center;
+    box-shadow: 0px -3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+#temp {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 10px ridge #f17c4e;
+    width: 100%;
+    align-items: center;
+}
+
+#gameContainer .feedBackMsg,
+#gameContainer .feedBackStat {
+    background-color: whitesmoke;
+    padding: 5px 10px;
+    text-align: center;
+    width: 90%;
+    border: 5px inset #f17c4e;
+    border-radius: 20px;
+    flex: 1 1 10%;
+}
+
+#gameContainer .feedBackStat {
+    margin-top: 10px;
+}
+
+#gameContainer .feedBackMsg {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#gameContainer .returnButton,
+#gameContainer .petActions {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-around;
+    gap: 1em;
+    padding: 10px 0px;
+}
+
+#gameContainer .petActions {
+    flex: 1 1 40%;
+    background-color: #f17c4e;
+}
+
+#gameContainer .returnButton {
+    justify-content: center;
+    gap: 4em;
+    flex: 1 1 30%;
+    background-color: rgb(39, 36, 36);
+    border-top: 10px ridge #f17c4e;
+}
+
+#gameContainer .petActions button:last-child {
+    margin-right: 30px;
+}
+
+#gameContainer .petActions button:first-child {
+    margin-left: 30px;
+}
+
+
+#gameContainer .petActions button {
+    display: flex;
+    background-color: #eb5e28;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 20px;
+    flex: 1 1 90%;
+    justify-content: space-evenly;
+    border: 3px outset #da8462;
+
+}
+
+.rbMenus {
+    background-color: #a08b82;
+    border: 3px outset rgb(172, 165, 165);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 2px 25px;
+    width: 14vw;
+    color: rgb(39, 36, 36);
+
+}
+
+
+
+.rbMenus:hover,
+#gameContainer .petActions button:hover {
+  
+    border-style: inset;
+}
+.rbMenus:hover{
+    background: #cfcee2;
+}
+
+/* ........................................................... */
+
+
+
+
+/* popup window stuff */
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    transition: opacity 1000ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+}
+
+.popup {
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 40%;
+    height: 45%;
+    max-height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+    transition: all 1000ms ease-in-out;
+    background: rgb(169, 160, 160);
+}
+
+
+.popup .close {
+    position: absolute;
+    font-size: 2em;
+    right: 0px;
+    top: 0px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #006634;
+}
+
+.popup .close:hover {
+    color: red;
+}
